@@ -60,6 +60,11 @@ git config --global alias.ll   "log --pretty='%C(Yellow)%h%x09%C(reset)(%ci) %C(
 git config --global alias.lg   "log --graph --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]' --abbrev-commit --date=short"
 git config --global alias.alias "config --get-regexp ^alias\."
 
+# Link: https://blog.miniasp.com/post/2020/05/24/Setup-git-ignore-alias-to-download-gitignore-templates
+# 可以使用 git ignore list 來查看可以下載的 .gitignore 檔案
+# 可以使用 git ignore <templates> >> .gitignore 來下載 .gitignore 檔案
+# 可以用 git changelog 來產生 CHANGELOG.md 檔案，需搭配 npm commitizen, cz-conventional-changelog, conventional-changelog-cli 等套件
+
 # 必須是 Windows 平台才會執行以下設定
 git config --global alias.ignore '!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
 git config --global alias.iac '!giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac'
