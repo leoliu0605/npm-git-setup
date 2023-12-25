@@ -1,0 +1,22 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "autocorrect",
+        "autocrlf",
+        "Cgreen",
+        "Creset",
+        "dcommit",
+        "giac",
+        "longpaths",
+        "oneline",
+        "PROGRA",
+        "quotepath",
+        "SETX",
+        "tlog"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
