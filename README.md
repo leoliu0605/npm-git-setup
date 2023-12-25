@@ -81,9 +81,6 @@ git config --global alias.changelog '!'"conventional-changelog -p angular -i CHA
 
 # 必須是 Windows 平台且有安裝 TortoiseGit 才會設定 tlog 這個 alias
 git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
-
-# 必須是 Windows 平台才會將預設編輯器設定為 notepad
-git config --global core.editor notepad
 ```
 
 ## 提供建議

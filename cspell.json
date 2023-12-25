@@ -10,12 +10,14 @@
         "Creset",
         "dcommit",
         "giac",
+        "leoli",
         "longpaths",
         "oneline",
         "PROGRA",
         "quotepath",
         "SETX",
-        "tlog"
+        "tlog",
+        "willh"
     ],
     "ignoreWords": [],
     "import": []
