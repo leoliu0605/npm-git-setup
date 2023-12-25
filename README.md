@@ -38,6 +38,9 @@ git config --global core.quotepath false
 # 避免 Windows 平台的檔案路徑長度問題
 git config --global core.longpaths true
 
+# git svn dcommit 時會自動刪除 SVN 庫空白的資料夾 (但是不會刪除非空白的資料夾)
+git config --global svn.rmdir true
+
 # 在命令列環境下自動標示顏色
 git config --global color.diff auto
 git config --global color.status auto
@@ -47,7 +50,7 @@ git config --global color.branch auto
 git config --global alias.ci   "commit --allow-empty-message"
 git config --global alias.cm   "commit --amend -C HEAD"
 git config --global alias.co   checkout
-git config --global alias.st   status
+git config --global alias.ss   status
 git config --global alias.sts  "status -s"
 git config --global alias.br   branch
 git config --global alias.re   remote

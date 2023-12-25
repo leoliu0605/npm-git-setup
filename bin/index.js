@@ -46,6 +46,7 @@ const fs = require('fs');
     await cmd("git config --global core.autocrlf false");
     await cmd("git config --global core.quotepath false");
     await cmd("git config --global core.longpaths true");
+    await cmd("git config --global svn.rmdir true");
 
     await cmd("git config --global color.diff auto");
     await cmd("git config --global color.status auto");
@@ -54,7 +55,7 @@ const fs = require('fs');
     await cmd("git config --global alias.ci   \"commit --allow-empty-message\"");
     await cmd("git config --global alias.cm   \"commit --amend -C HEAD\"");
     await cmd("git config --global alias.co   checkout");
-    await cmd("git config --global alias.st   status");
+    await cmd("git config --global alias.ss   status");
     await cmd("git config --global alias.sts  \"status -s\"");
     await cmd("git config --global alias.br   branch");
     await cmd("git config --global alias.re   remote");
@@ -87,10 +88,6 @@ const fs = require('fs');
         await cmd("git config --global alias.changelog \"!conventional-changelog -p angular -i CHANGELOG.md -s\"");
     } else {
         await cmd("git config --global alias.changelog '!'\"conventional-changelog -p angular -i CHANGELOG.md -s\"");
-    }
-
-    if (os === 'win32') {
-        await cmd("git config --global core.editor notepad");
     }
 
     if (!process.env.LC_ALL) {
