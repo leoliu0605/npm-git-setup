@@ -71,11 +71,13 @@ git config --global alias.alias "config --get-regexp ^alias\."
 # 必須是 Windows 平台才會執行以下設定
 git config --global alias.ignore '!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
 git config --global alias.iac '!giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac'
+git config --global alias.cz '!npx cz'
 git config --global alias.changelog "!conventional-changelog -p angular -i CHANGELOG.md -s"
 
 # 必須是 Linux/macOS 平台才會執行以下設定
 git config --global alias.ignore '!'"gi() { curl -sL https://www.gitignore.io/api/\$@ ;}; gi"
 git config --global alias.iac '!'"giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac"
+git config --global alias.cz '!'"npx cz"
 git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s"
 
 

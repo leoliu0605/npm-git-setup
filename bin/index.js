@@ -85,8 +85,10 @@ const fs = require('fs');
     }
 
     if (os === 'win32') {
+        await cmd("git config --global alias.cz   \"!npx cz\"");
         await cmd("git config --global alias.changelog \"!conventional-changelog -p angular -i CHANGELOG.md -s\"");
     } else {
+        await cmd("git config --global alias.cz   '!'\"npx cz\"");
         await cmd("git config --global alias.changelog '!'\"conventional-changelog -p angular -i CHANGELOG.md -s\"");
     }
 
