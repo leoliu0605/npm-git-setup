@@ -80,6 +80,12 @@ const fs = require('fs');
         await cmd("git config --global alias.iac '!'\"giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac\"");
     }
 
+    if (os === 'win32') {
+        await cmd("git config --global alias.coc \"!gcoc() { git checkout -- . && git clean -df ;}; gcoc\"");
+    } else {
+        await cmd("git config --global alias.coc '!'\"gcoc() { git checkout -- . && git clean -df ;}; gcoc\"");
+    }
+
     if (os === 'win32' && fs.existsSync('C:/PROGRA~1/TortoiseGit/bin/TortoiseGitProc.exe')) {
         await cmd("git config --global alias.tlog \"!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:.");
     }
