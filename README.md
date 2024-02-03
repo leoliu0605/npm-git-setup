@@ -23,68 +23,61 @@ npx @leoli0605/git-setup
 ## 設定內容
 
 ```sh
-git config --global user.name  ${name}
-git config --global user.email  ${email}
+git config --global user.name  "${name}"
+git config --global user.email  "${email}"
 
-# 設定打錯命令時 3 秒內會自動做出判斷
-git config --global help.autocorrect 30
-
-# 現在大多編輯器都已經能正確處理 CRLF 字元，不再需要自動轉換了！
 git config --global core.autocrlf false
-
-# 為了能正確顯示 UTF-8 中文字
 git config --global core.quotepath false
-
-# 避免 Windows 平台的檔案路徑長度問題
 git config --global core.longpaths true
-
-# git svn dcommit 時會自動刪除 SVN 庫空白的資料夾 (但是不會刪除非空白的資料夾)
 git config --global svn.rmdir true
 
-# 在命令列環境下自動標示顏色
+git config --global help.autocorrect 30
+
 git config --global color.diff auto
 git config --global color.status auto
 git config --global color.branch auto
 
-# 常用的 Git Alias 命令
-git config --global alias.ci   "commit --allow-empty-message"
-git config --global alias.cm   "commit --amend -C HEAD"
+git config --global pull.rebase true
+
 git config --global alias.co   checkout
 git config --global alias.ss   status
-git config --global alias.sts  "status -s"
 git config --global alias.br   branch
 git config --global alias.re   remote
+git config --global alias.pushf "push --force-with-lease"
 git config --global alias.di   diff
-git config --global alias.type "cat-file -t"
-git config --global alias.dump "cat-file -p"
+
+git config --global alias.ci   "commit --allow-empty-message"
+git config --global alias.cm   "commit --amend -C HEAD"
+
 git config --global alias.lo   "log --oneline"
 git config --global alias.ls   "log --show-signature"
 git config --global alias.ll   "log --pretty='%C(Yellow)%h%x09%C(reset)(%ci) %C(Cyan)%an: %C(reset)%s' --date=short"
 git config --global alias.lg   "log --graph --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]' --abbrev-commit --date=short"
+
+git config --global alias.sts  "status -s"
+git config --global alias.type "cat-file -t"
+git config --global alias.dump "cat-file -p"
+
 git config --global alias.alias "config --get-regexp ^alias\."
 
-# Link: https://blog.miniasp.com/post/2020/05/24/Setup-git-ignore-alias-to-download-gitignore-templates
-# 可以使用 git ignore list 來查看可以下載的 .gitignore 檔案
-# 可以使用 git ignore <templates> >> .gitignore 來下載 .gitignore 檔案
-# 可以用 git changelog 來產生 CHANGELOG.md 檔案，需搭配 npm commitizen, cz-conventional-changelog, conventional-changelog-cli 等套件
-
-# 必須是 Windows 平台才會執行以下設定
-git config --global alias.ignore '!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
-git config --global alias.iac '!giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac'
-git config --global alias.coc '!gcoc() { git checkout -- . && git clean -df ;}; gcoc'
-git config --global alias.cz '!npx cz'
-git config --global alias.changelog "!conventional-changelog -p angular -i CHANGELOG.md -s"
-
-# 必須是 Linux/macOS 平台才會執行以下設定
+# 跨平台的 .gitignore 快速設定指令
 git config --global alias.ignore '!'"gi() { curl -sL https://www.gitignore.io/api/\$@ ;}; gi"
+
+# 快速初始化 Git 庫並做第一次提交的指令
 git config --global alias.iac '!'"giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac"
+
+# 快速清理工作目錄並復原已追蹤的檔案的指令
 git config --global alias.coc '!'"gcoc() { git checkout -- . && git clean -df ;}; gcoc"
+
+# Windows 平台專用 TortoiseGit 日誌指令
+git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
+
+# 快速使用 Commitizen 進行提交的指令
 git config --global alias.cz '!'"npx cz"
+
+# 快速產生 CHANGELOG.md 檔案的指令
 git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s"
 
-
-# 必須是 Windows 平台且有安裝 TortoiseGit 才會設定 tlog 這個 alias
-git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
 ```
 
 ## 提供建議
