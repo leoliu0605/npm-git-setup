@@ -1,6 +1,6 @@
 {
   "name": "@leoli0605/git-setup",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "一款基於 `@willh/git-setup` 的 git 初始化工具，用於快速初始化 git 設定檔案",
   "bin": "./bin/index.js",
   "repository": {
