@@ -64,11 +64,12 @@ const fs = require('fs');
   await cmd('git config --global push.followTags true');
 
   // Git aliases for basic commands
+  await cmd('git config --global alias.list "--no-pager config --global --list"');
   await cmd('git config --global alias.co checkout');
   await cmd('git config --global alias.ss status');
   await cmd('git config --global alias.br branch');
   await cmd('git config --global alias.re remote');
-  await cmd('git config --global alias.pushf "push --force-with-lease"');
+  await cmd('git config --global alias.pf "push --force-with-lease"');
   await cmd('git config --global alias.di diff');
 
   // Git aliases for commit-related commands
@@ -105,16 +106,16 @@ const fs = require('fs');
 
   // Git checkout and clean alias configuration
   if (os === 'win32') {
-    await cmd('git config --global alias.coc "!gcoc() { git checkout -- . && git clean -df ;}; gcoc"');
+    await cmd('git config --global alias.cc "!gcc() { git checkout -- . && git clean -df ;}; gcc"');
   } else {
-    await cmd('git config --global alias.coc \'!\'"gcoc() { git checkout -- . && git clean -df ;}; gcoc"');
+    await cmd('git config --global alias.cc \'!\'"gcc() { git checkout -- . && git clean -df ;}; gcc"');
   }
 
   // Git tag alias configuration
   if (os === 'win32') {
-    await cmd('git config --global alias.taga "!gtaga() { git tag -a "$1" -m "$1" ;}; gtaga"');
+    await cmd('git config --global alias.tg "!gtg() { git tag -a "$1" -m "$1" ;}; gtg"');
   } else {
-    await cmd('git config --global alias.taga \'!\'"gtaga() { git tag -a "$1" -m "$1" ;}; gtaga"');
+    await cmd('git config --global alias.tg \'!\'"gtg() { git tag -a "$1" -m "$1" ;}; gtg"');
   }
 
   // TortoiseGit log alias configuration for Windows

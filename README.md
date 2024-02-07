@@ -40,11 +40,12 @@ git config --global color.branch auto
 git config --global pull.rebase true
 git config --global push.followTags true
 
+git config --global alias.list "--no-pager config --global --list"
 git config --global alias.co   checkout
 git config --global alias.ss   status
 git config --global alias.br   branch
 git config --global alias.re   remote
-git config --global alias.pushf "push --force-with-lease"
+git config --global alias.pf "push --force-with-lease"
 git config --global alias.di   diff
 
 git config --global alias.ci   "commit --allow-empty-message"
@@ -68,10 +69,10 @@ git config --global alias.ignore '!'"gi() { curl -sL https://www.gitignore.io/ap
 git config --global alias.iac '!'"giac() { git init -b main && git add . && git commit -m 'Initial commit' ;}; giac"
 
 # 快速清理工作目錄並復原已追蹤的檔案的指令
-git config --global alias.coc '!'"gcoc() { git checkout -- . && git clean -df ;}; gcoc"
+git config --global alias.cc '!'"gcc() { git checkout -- . && git clean -df ;}; gcc"
 
 # 快速新增標籤的指令
-git config --global alias.taga '!'"gtaga() { git tag -a $1 -m "$1" ;}; gtaga"
+git config --global alias.tg '!'"gtg() { git tag -a $1 -m "$1" ;}; gtg"
 
 # Windows 平台專用 TortoiseGit 日誌指令
 git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
