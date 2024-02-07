@@ -64,7 +64,11 @@ const fs = require('fs');
   await cmd('git config --global push.followTags true');
 
   // Git aliases for basic commands
-  await cmd('git config --global alias.list "--no-pager config --global --list"');
+  if (os === 'win32') {
+    await cmd('git config --global alias.list "!git --no-pager config --global --list"');
+  } else {
+    await cmd('git config --global alias.list \'!\'"git --no-pager config --global --list"');
+  }
   await cmd('git config --global alias.co checkout');
   await cmd('git config --global alias.ss status');
   await cmd('git config --global alias.br branch');
