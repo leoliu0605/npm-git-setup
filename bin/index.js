@@ -60,6 +60,9 @@ const fs = require('fs');
   // Git pull configuration
   await cmd('git config --global pull.rebase true');
 
+  // Git push configuration
+  await cmd('git config --global push.followTags true');
+
   // Git aliases for basic commands
   await cmd('git config --global alias.co checkout');
   await cmd('git config --global alias.ss status');
@@ -105,6 +108,13 @@ const fs = require('fs');
     await cmd('git config --global alias.coc "!gcoc() { git checkout -- . && git clean -df ;}; gcoc"');
   } else {
     await cmd('git config --global alias.coc \'!\'"gcoc() { git checkout -- . && git clean -df ;}; gcoc"');
+  }
+
+  // Git tag alias configuration
+  if (os === 'win32') {
+    await cmd('git config --global alias.taga "!gtaga() { git tag -a "$1" -m "$1" ;}; gtaga"');
+  } else {
+    await cmd('git config --global alias.taga \'!\'"gtaga() { git tag -a "$1" -m "$1" ;}; gtaga"');
   }
 
   // TortoiseGit log alias configuration for Windows
