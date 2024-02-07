@@ -22,6 +22,9 @@
   "author": "Leo Li",
   "license": "MIT",
   "scripts": {
-    "tag": "npm version minor && git push --follow-tags"
+    "tag": "npm run tag:minor",
+    "tag:major": "npm version major && git push --follow-tags",
+    "tag:minor": "npm version minor && git push --follow-tags",
+    "tag:patch": "npm version patch && git push --follow-tags"
   }
 }
