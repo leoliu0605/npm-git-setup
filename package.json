@@ -20,5 +20,8 @@
   ],
   "homepage": "https://github.com/leoli0605/npm-git-setup",
   "author": "Leo Li",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "tag": "npm version minor && git push --follow-tags"
+  }
 }
