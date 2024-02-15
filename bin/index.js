@@ -117,9 +117,9 @@ const fs = require('fs');
 
   // Git tag alias configuration
   if (os === 'win32') {
-    await cmd("git config --global alias.tg \"!gtg() { git tag -a '$1' -m '$1' ;}; gtg\"");
+    await cmd('git config --global alias.tg "!gtg() { git tag -a \\"$1\\" -m \\"$1\\" ;}; gtg"');
   } else {
-    await cmd("git config --global alias.tg '!'\"gtg() { git tag -a '$1' -m '$1' ;}; gtg\"");
+    await cmd('git config --global alias.tg \'!\'"gtg() { git tag -a \\"\\$1\\" -m \\"\\$1\\" ;}; gtg"');
   }
 
   // TortoiseGit log alias configuration for Windows
