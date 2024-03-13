@@ -130,10 +130,10 @@ const fs = require('fs');
   // Commitizen and changelog alias configuration
   if (os === 'win32') {
     await cmd('git config --global alias.cz "!npx cz"');
-    await cmd('git config --global alias.changelog "!conventional-changelog -p angular -i CHANGELOG.md -s"');
+    await cmd('git config --global alias.changelog "!conventional-changelog -p angular -i CHANGELOG.md -s -r 0"');
   } else {
     await cmd('git config --global alias.cz \'!\'"npx cz"');
-    await cmd('git config --global alias.changelog \'!\'"conventional-changelog -p angular -i CHANGELOG.md -s"');
+    await cmd('git config --global alias.changelog \'!\'"conventional-changelog -p angular -i CHANGELOG.md -s -r 0"');
   }
 
   // Environment variable configuration

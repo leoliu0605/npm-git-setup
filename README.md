@@ -81,7 +81,7 @@ git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\Tortoise
 git config --global alias.cz '!'"npx cz"
 
 # 快速產生 CHANGELOG.md 檔案的指令
-git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s"
+git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
 
 ```
 
