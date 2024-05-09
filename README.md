@@ -26,6 +26,7 @@ npx @leoli0605/git-setup
 git config --global user.name  "${name}"
 git config --global user.email  "${email}"
 
+git config --global core.editor "vim"
 git config --global core.autocrlf false
 git config --global core.quotepath false
 git config --global core.longpaths true

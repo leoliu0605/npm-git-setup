@@ -44,6 +44,7 @@ const fs = require('fs');
   await cmd(`git config --global user.email "${email}"`);
 
   // Git core configuration
+  await cmd('git config --global core.editor "vim"');
   await cmd('git config --global core.autocrlf false');
   await cmd('git config --global core.quotepath false');
   await cmd('git config --global core.longpaths true');
