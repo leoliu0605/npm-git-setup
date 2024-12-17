@@ -80,6 +80,11 @@ const fs = require('fs');
   // Git aliases for commit-related commands
   await cmd('git config --global alias.ci "commit --allow-empty-message"');
   await cmd('git config --global alias.cm "commit --amend -C HEAD"');
+  if (os === 'win32') {
+    await cmd('git config --global alias.gpt "!gpt() { codegpt commit --preview --template_string \"{{ .summarize_prefix }}: {{ .summarize_title }}\" ;}; gpt"');
+  } else {
+    await cmd('git config --global alias.gpt \'!\'"gpt() { codegpt commit --preview --template_string \"{{ .summarize_prefix }}: {{ .summarize_title }}\" ;}; gpt"');
+  }
 
   // Git aliases for log visualization
   await cmd('git config --global alias.lo "log --oneline"');

@@ -23,8 +23,8 @@ npx @leoli0605/git-setup
 ## 設定內容
 
 ```sh
-git config --global user.name  "${name}"
-git config --global user.email  "${email}"
+git config --global user.name "${name}"
+git config --global user.email "${email}"
 
 git config --global core.editor "vim"
 git config --global core.autocrlf false
@@ -42,22 +42,23 @@ git config --global pull.rebase true
 git config --global push.followTags true
 
 git config --global alias.list '!'"git --no-pager config --global --list"
-git config --global alias.co   checkout
-git config --global alias.ss   status
-git config --global alias.br   branch
-git config --global alias.re   remote
+git config --global alias.co checkout
+git config --global alias.ss status
+git config --global alias.br branch
+git config --global alias.re remote
 git config --global alias.pf "push --force-with-lease"
-git config --global alias.di   diff
+git config --global alias.di diff
 
-git config --global alias.ci   "commit --allow-empty-message"
-git config --global alias.cm   "commit --amend -C HEAD"
+git config --global alias.ci "commit --allow-empty-message"
+git config --global alias.cm "commit --amend -C HEAD"
+git config --global alias.gpt '!'"gpt() { codegpt commit --preview --template_string \"{{ .summarize_prefix }}: {{ .summarize_title }}\" ;}; gpt"
 
-git config --global alias.lo   "log --oneline"
-git config --global alias.ls   "log --show-signature"
-git config --global alias.ll   "log --pretty='%C(Yellow)%h%x09%C(reset)(%ci) %C(Cyan)%an: %C(reset)%s' --date=short"
-git config --global alias.lg   "log --graph --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]' --abbrev-commit --date=short"
+git config --global alias.lo "log --oneline"
+git config --global alias.ls "log --show-signature"
+git config --global alias.ll "log --pretty='%C(Yellow)%h%x09%C(reset)(%ci) %C(Cyan)%an: %C(reset)%s' --date=short"
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]' --abbrev-commit --date=short"
 
-git config --global alias.sts  "status -s"
+git config --global alias.sts "status -s"
 git config --global alias.type "cat-file -t"
 git config --global alias.dump "cat-file -p"
 
@@ -83,7 +84,6 @@ git config --global alias.cz '!'"npx cz"
 
 # 快速產生 CHANGELOG.md 檔案的指令
 git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
-
 ```
 
 ## 提供建議
