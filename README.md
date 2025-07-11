@@ -50,8 +50,7 @@ git config --global alias.pf "push --force-with-lease"
 git config --global alias.di diff
 
 git config --global alias.ci "commit --allow-empty-message"
-git config --global alias.cm "commit --amend -C HEAD"
-git config --global alias.gpt '!'"gpt() { codegpt commit --preview --template_string \"{{ .summarize_prefix }}: {{ .summarize_title }}\" ;}; gpt"
+git config --global alias.ca "commit --amend -C HEAD"
 
 git config --global alias.lo "log --oneline"
 git config --global alias.ls "log --show-signature"
@@ -74,7 +73,7 @@ git config --global alias.iac '!'"giac() { git init -b main && git add . && git 
 git config --global alias.cc '!'"gcc() { git checkout -- . && git clean -df ;}; gcc"
 
 # 快速新增標籤的指令
-git config --global alias.tg '!'"gtg() { git tag -a \"\$1\" -m \"\$1\" ;}; gtg"
+git config --global alias.tagm '!'"gtg() { git tag -a \"\$1\" -m \"\$1\" ;}; gtg"
 
 # Windows 平台專用 TortoiseGit 日誌指令
 git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
