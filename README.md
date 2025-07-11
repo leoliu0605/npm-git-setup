@@ -87,12 +87,12 @@ git config --global alias.changelog '!'"conventional-changelog -p angular -i CHA
 
 ## 提供建議
 
-如果您對本工具有任何想法，歡迎到[這裡](https://github.com/leoli0605/npm-git-setup/issues)留言討論！
+如果您對本工具有任何想法，歡迎到[這裡](https://github.com/leoliu0605/npm-git-setup/issues)留言討論！
 
 ## 作者資訊
 
-- **LeoLi**
-- 部落格：https://leo.dinosauria.club/
+- **LeoLiu**
+- 部落格：https://miscellaneous.im/blog/
 
 ## 相關連結
 
