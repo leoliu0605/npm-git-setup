@@ -1,3 +1,38 @@
+# [0.11.0](https://github.com/leoli0605/npm-git-setup/compare/v0.10.1...v0.11.0) (2025-08-05)
+
+
+### Features
+
+* **aliases:** update and streamline git aliases by removing unused entries and adding new ones ([cdb0bc0](https://github.com/leoli0605/npm-git-setup/commit/cdb0bc09af2be9b7f2f60f89607e239791e66d0e))
+
+
+
+## [0.10.1](https://github.com/leoli0605/npm-git-setup/compare/v0.10.0...v0.10.1) (2025-07-11)
+
+
+
+# [0.10.0](https://github.com/leoli0605/npm-git-setup/compare/v0.9.0...v0.10.0) (2025-07-11)
+
+
+### Features
+
+* update Git aliases for commit and tag commands ([a92ed13](https://github.com/leoli0605/npm-git-setup/commit/a92ed1308ceb4210e8f0f6a8c5a028f619b27b2a))
+
+
+
+# [0.9.0](https://github.com/leoli0605/npm-git-setup/compare/v0.8.0...v0.9.0) (2024-12-17)
+
+
+### Features
+
+* implement universal 'gpt' Git alias for automated commits ([83860c9](https://github.com/leoli0605/npm-git-setup/commit/83860c9dc2736e174f8852e552f1661f939e4a1c)), closes [#5](https://github.com/leoli0605/npm-git-setup/issues/5)
+
+
+
+# [0.8.0](https://github.com/leoli0605/npm-git-setup/compare/v0.7.0...v0.8.0) (2024-05-09)
+
+
+
 # [0.7.0](https://github.com/leoli0605/npm-git-setup/compare/v0.6.3...v0.7.0) (2024-03-13)
 
 
