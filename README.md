@@ -20,6 +20,13 @@ npx @leoli0605/git-setup
 - Windows 平台會自動設定 `LC_ALL` 與 `LANG` 使用者環境變數
   - Linux, macOS 平台會提醒進行設定
 
+> [!TIP]
+> 可以使用下列指令快速清除已經存在的 Git 別名設定：<br>
+> - Windows:<br>
+> `git config --global --get-regexp '^alias\.' | % { git config --global --unset ($_.Split(" ")[0]) }`<br>
+> - Unix:<br>
+> `git config --global --get-regexp ^alias\. | cut -d ' ' -f1 | xargs -L1 git config --global --unset`
+
 ## 設定內容
 
 ```sh
