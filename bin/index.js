@@ -72,10 +72,9 @@ const fs = require('fs');
   }
   await cmd('git config --global alias.co checkout');
   await cmd('git config --global alias.ss status');
+  await cmd('git config --global alias.sss "status -s"');
   await cmd('git config --global alias.br branch');
-  await cmd('git config --global alias.re remote');
   await cmd('git config --global alias.pf "push --force-with-lease"');
-  await cmd('git config --global alias.di diff');
 
   // Git aliases for commit-related commands
   await cmd('git config --global alias.ci "commit --allow-empty-message"');
@@ -86,11 +85,6 @@ const fs = require('fs');
   await cmd('git config --global alias.ls "log --show-signature"');
   await cmd('git config --global alias.ll "log --pretty=\'%C(Yellow)%h%x09%C(reset)(%ci) %C(Cyan)%an: %C(reset)%s\' --date=short"');
   await cmd('git config --global alias.lg "log --graph --pretty=format:\'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]\' --abbrev-commit --date=short"');
-
-  // Git aliases for status and type inspection
-  await cmd('git config --global alias.sts "status -s"');
-  await cmd('git config --global alias.type "cat-file -t"');
-  await cmd('git config --global alias.dump "cat-file -p"');
 
   // Git aliases for advanced configurations
   await cmd('git config --global alias.alias "config --get-regexp ^alias\\."');

@@ -44,10 +44,9 @@ git config --global push.followTags true
 git config --global alias.list '!'"git --no-pager config --global --list"
 git config --global alias.co checkout
 git config --global alias.ss status
+git config --global alias.sss "status -s"
 git config --global alias.br branch
-git config --global alias.re remote
 git config --global alias.pf "push --force-with-lease"
-git config --global alias.di diff
 
 git config --global alias.ci "commit --allow-empty-message"
 git config --global alias.ca "commit --amend -C HEAD"
@@ -56,10 +55,6 @@ git config --global alias.lo "log --oneline"
 git config --global alias.ls "log --show-signature"
 git config --global alias.ll "log --pretty='%C(Yellow)%h%x09%C(reset)(%ci) %C(Cyan)%an: %C(reset)%s' --date=short"
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset [%Cgreen%an%Creset]' --abbrev-commit --date=short"
-
-git config --global alias.sts "status -s"
-git config --global alias.type "cat-file -t"
-git config --global alias.dump "cat-file -p"
 
 git config --global alias.alias "config --get-regexp ^alias\."
 
@@ -78,10 +73,10 @@ git config --global alias.tagm '!'"gtg() { git tag -a \"\$1\" -m \"\$1\" ;}; gtg
 # Windows 平台專用 TortoiseGit 日誌指令
 git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
 
-# 快速使用 Commitizen 進行提交的指令
+# 快速使用 Commitizen 進行提交的指令，請先執行 `npm install -g commitizen`
 git config --global alias.cz '!'"npx cz"
 
-# 快速產生 CHANGELOG.md 檔案的指令
+# 快速產生 CHANGELOG.md 檔案的指令，請先執行 `npm install -g conventional-changelog-cli`
 git config --global alias.changelog '!'"conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
 ```
 
