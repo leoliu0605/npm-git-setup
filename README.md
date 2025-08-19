@@ -75,7 +75,7 @@ git config --global alias.iac '!'"giac() { git init -b main && git add . && git 
 git config --global alias.cc '!'"gcc() { git checkout -- . && git clean -df ;}; gcc"
 
 # 快速新增標籤的指令
-git config --global alias.tagm '!'"gtg() { git tag -a \"\$1\" -m \"\$1\" ;}; gtg"
+git config --global alias.tg '!'"gtg() { git tag -a \"\$1\" -m \"\$1\" ;}; gtg"
 
 # Windows 平台專用 TortoiseGit 日誌指令
 git config --global alias.tlog "!start 'C:\\PROGRA~1\\TortoiseGit\\bin\\TortoiseGitProc.exe' /command:log /path:."
