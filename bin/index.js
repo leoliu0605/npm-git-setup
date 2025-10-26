@@ -50,6 +50,9 @@ const fs = require('fs');
   await cmd('git config --global core.longpaths true');
   await cmd('git config --global svn.rmdir true');
 
+  // Git init configuration
+  await cmd('git config --global init.defaultBranch main');
+
   // Git help configuration
   await cmd('git config --global help.autocorrect 30');
 
