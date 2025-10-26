@@ -39,6 +39,8 @@ git config --global core.quotepath false
 git config --global core.longpaths true
 git config --global svn.rmdir true
 
+git config --global init.defaultBranch main
+
 git config --global help.autocorrect 30
 
 git config --global color.diff auto
