@@ -48,6 +48,7 @@ git config --global color.status auto
 git config --global color.branch auto
 
 git config --global pull.rebase true
+git config --global pull.autostash true
 git config --global push.followTags true
 
 git config --global alias.list '!'"git --no-pager config --global --list"

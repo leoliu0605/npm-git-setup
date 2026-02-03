@@ -63,6 +63,7 @@ const fs = require('fs');
 
   // Git pull configuration
   await cmd('git config --global pull.rebase true');
+  await cmd('git config --global pull.autostash true');
 
   // Git push configuration
   await cmd('git config --global push.followTags true');
